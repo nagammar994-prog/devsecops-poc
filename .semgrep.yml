@@ -1,5 +1,9 @@
 rules:
   - id: javascript.express.security.audit.express-check-csurf-middleware-usage
-    severity: WARNING
+    languages: [javascript]             # REQUIRED
+    severity: WARNING                   # Non-blocking for demo
     message: "CSRF protection missing (POC override, non-blocking)"
+    patterns:
+      - pattern: "app.use(csrfProtection)"  # Looks for usage of CSRF middleware
+
 
