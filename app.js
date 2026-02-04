@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 
 // Hardcoded secret (intentional for POC)
-const API_KEY = "sk_test_123456789";
+const API_KEY =  process.env.API_KEY;;
 
 app.get("/", (req, res) => {
   res.send("DevSecOps POC App");
