@@ -22,7 +22,9 @@ jobs:
     - name: Run Semgrep
       uses: returntocorp/semgrep-action@v1
       with:
-        config: "p/default"
+     config: .semgrep.yml   # Use your custom config
+
+
 
     # 3. Dependency scanning (SCA)
     - name: Run npm audit
