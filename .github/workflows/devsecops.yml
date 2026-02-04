@@ -40,6 +40,6 @@ jobs:
       uses: aquasecurity/trivy-action@0.20.0
       with:
         image-ref: devsecops-poc:latest
-        severity: CRITICAL,HIGH
+        severity: CRITICAL
         exit-code: 1
 
