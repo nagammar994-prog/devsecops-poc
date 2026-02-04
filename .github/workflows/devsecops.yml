@@ -21,11 +21,8 @@ jobs:
     # 2. SAST - Semgrep
     - name: Run Semgrep
       uses: returntocorp/semgrep-action@v1
-      with:
-     config: .semgrep.yml   # Use your custom config
-
-
-
+     with:
+      config: .semgrep.yml
     # 3. Dependency scanning (SCA)
     - name: Run npm audit
       run: |
